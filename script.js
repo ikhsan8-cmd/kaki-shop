@@ -11,68 +11,190 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const appData = {
+        // --- APLIKASI YANG SUDAH ADA ---
         "CapCut Pro": {
-            img: "https://play-lh.googleusercontent.com/wovt3eI1o8U2gA_T_3t450zCK_o9h_052h0v3wXoP9lBGJ9sWAiL53FvnA-qAFErOFg=w240-h480-rw",
+            img: "https://th.bing.com/th/id/OSAAS.9309E57AEB6FAE9D260C0BB567E36678?w=72&h=72&c=1&rs=1&o=6&dpr=1.3&pid=TechQna",
             packages: [ 
-                { type: "Promo", name: "7 hari", price: "Rp 18.000" }, 
-                { type: "Private", name: "1 bulan", price: "Rp 28.000" }, 
-                { type: "Sharing", name: "1 bulan", price: "Rp 18.000" }, 
-                { type: "Sharing", name: "2 bulan", price: "Rp 28.000" },
-                { type: "Sharing", name: "3 bulan", price: "Rp 38.000" },
-                { type: "Sharing", name: "4 bulan", price: "Rp 48.000" },
-                { type: "Sharing", name: "5 bulan", price: "Rp 58.000" },
-                { type: "Sharing", name: "6 bulan", price: "Rp 68.000" }
+                { type: "Promo", name: "1 Bulan (private)", price: 20000, oldPrice: 28000 }, 
+                { type: "Harga normal", name: "1 bulan (Private)", price: 28000 }, 
             ],
-            discount: "15%",
             stock: 12,
-            soldToday: 20,
+            soldToday: 27,
             category: "Editing"
-        },
-        "Spotify Premium": {
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png",
-            packages: [ { type: "Sharing", name: "1 bulan", price: "Rp 25.000" },
-                        { type: "Sharing", name: "3 bulan", price: "Rp 70.000" },
-                        { type: "Sharing", name: "1 bulan", price: "Rp 25.000" },
-                        { type: "Sharing", name: "1 bulan", price: "Rp 25.000" },
-                        { type: "Sharing", name: "1 bulan", price: "Rp 25.000" },
-                        { type: "Sharing", name: "1 bulan", price: "Rp 25.000" },
-                        { type: "Sharing", name: "1 bulan", price: "Rp 25.000" } 
-                    ],
-            discount: "20%",
-            stock: 25,
-            soldToday: 58,
-            category: "Musik"
         },
         "Canva Pro": {
-            img: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Canva_logo_no_text.svg/2048px-Canva_logo_no_text.svg.png",
-            packages: [ { type: "Private", name: "1 bulan", price: "Rp 30.000" }, { type: "Sharing", name: "1 bulan", price: "Rp 20.000" } ],
-            discount: "10%",
-            stock: 18,
-            soldToday: 45,
+            img: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2c/ef/18/2cef18d1-4a3b-b801-392f-98b091bf44b7/icon.png/434x0w.webp",
+            packages: [ 
+                { type: "Promo", name: "1 bulan", price: 6000, oldPrice: 10000 },
+                { type: "Promo", name: "2 bulan", price: 10000, oldPrice: 13000 },
+                { type: "Promo", name: "Seumur hidup", price: 16000, oldPrice: 20000 },
+                { type: "Harga normal", name: "3 bulan", price: 15000 } 
+            ],
+            stock: 10,
+            soldToday: 23,
             category: "Editing"
+        },
+        "Viu": {
+            img: "https://play-lh.googleusercontent.com/b09h7aIfYMfBtlFRVul6j7jV3pE-gFIHEvR6MmD7jnKxmrBshFNK8-HZwNpvaiI6kR4=s96-rw",
+            packages: [ 
+                { type: "Promo", name: "1 tahun", price: 18000, oldPrice: 25000 },
+                { type: "Harga normal", name: "1 tahun", price: 25000 }
+            ],
+            stock: 35,
+            soldToday: 22,
+            category: "Film & Hiburan"
         },
         "Netflix Premium": {
             img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/2048px-Netflix_2015_N_logo.svg.png",
-            packages: [ { type: "Private", name: "1 bulan", price: "Rp 45.000" }, { type: "Sharing", name: "1 bulan", price: "Rp 35.000" } ],
-            discount: "12%",
+            packages: [ 
+                { type: "1p1u", name: "7 hari (sharing)", price: 15000 },
+                { type: "1p1u", name: "1 bulan (Sharing)", price: 30000 },
+                { type: "1p1u", name: "2 bulan (sharing)", price: 55000 },
+                { type: "Promo", name: "1 bulan", price: 20000, oldPrice: 25000 },
+                { type: "1p2u", name: "7 hari (sharing)", price: 13500 },
+                { type: "1p2u", name: "2 bulan (sharing)", price: 45000 },
+                { type: "Semi private", name: "1 bulan", price: 42000 },
+                { type: "Semi private", name: "2 bulan", price: 80000 },
+                { type: "Private", name: "1 bulan", price: 55000 },
+                { type: "Private", name: "2 bulan", price: 100000 }
+            ],
             stock: 7,
-            soldToday: 72,
+            soldToday: 31,
             category: "Film & Hiburan"
         },
         "Disney+ Premium": {
             img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/2560px-Disney%2B_logo.svg.png",
-            packages: [ { type: "Private", name: "1 bulan", price: "Rp 40.000" }, { type: "Sharing", name: "1 bulan", price: "Rp 30.000" }],
-            discount: "18%",
+            packages: [ 
+                { type: "Harga", name: "7 hari (sharing)", price: 15000 }, 
+                { type: "Harga", name: "1 bulan (antilimit)", price: 26000 }
+            ],
             stock: 14,
+            soldToday: 6,
             category: "Film & Hiburan"
         },
         "Get Contact Premium": {
-            img: "https://play-lh.googleusercontent.com/4f2tCa21s50csM_A-1sgjB304Am0jHPU6aQFAC0xKufq8dl5a-w4o_T935kymSc-Wq4=w240-h480-rw",
-            packages: [ { type: "Private", name: "1 bulan", price: "Rp 15.000" }, { type: "Private", name: "1 tahun", price: "Rp 150.000" } ],
-            discount: "25%",
+            img: "https://play-lh.googleusercontent.com/HFxPZSWLMQDwl57wPs_iB7G0kia5Oi2zugYpd_SHGRuygChUd-zp9PqkD2_nNtVKzwY=s96-rw",
+            packages: [ 
+                { type: "Promo", name: "1 bulan", price: 15000, oldPrice: 20000 },
+                { type: "Harga normal", name: "1 bulan", price: 20000 } 
+            ],
             stock: 30,
-            soldToday: 15,
+            soldToday: 7,
             category: "Lainnya"
+        },
+        "Spotify Premium": {
+            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png",
+            packages: [ 
+                { type: "Promo", name: "1 bulan", price: 18000, oldPrice: 30000 },
+                { type: "Famplan", name: "2 bulan", price: 40000 },
+                { type: "Indplan", name: "1 bulan", price: 26000, oldPrice: 35000 }
+            ],
+            stock: 25,
+            soldToday: 29,
+            category: "Musik"
+        },
+
+        // --- 12 APLIKASI BARU ---
+        "Drakor id": {
+            img: "https://tse2.mm.bing.net/th/id/OIP.zg8cD_8lY2whNi6Sua0BIwAAAA?pid=ImgDet&w=207&h=207&c=7&dpr=1,3&o=7&rm=3",
+            packages: [ 
+                { type: "Harga", name: "1 bulan (sharing)", price: 12000 },
+                { type: "Harga", name: "1 tahun (sharing)", price: 20000 }
+            ],
+            stock: 40, soldToday: 18, category: "Film & Hiburan"
+        },
+        "Vidio": {
+            img: "https://thumbor.prod.vidiocdn.com/jwb8oTlMReuATpmgjkjlashb3fg=/filters:quality(70)/vidio-media-production/uploads/image/source/81/edf05a.png",
+            packages: [ 
+                { type: "Platinum all device", name: "1 bulan (sharing)", price: 24000 },
+                { type: "Platinum all device", name: "1 bulan (private)", price: 40000 },
+                { type: "Platinum mobile", name: "1 bulan (sharing)", price: 20000 },
+                { type: "Platinum mobile", name: "1 bulan (private)", price: 30000 },
+                { type: "Platinum only tv", name: "1 bulan (sharing)", price: 15000 },
+                { type: "Platinum only tv", name: "1 bulan (private)", price: 23000 }
+            ],
+            stock: 28, soldToday: 10, category: "Film & Hiburan"
+        },
+        "Loklok": {
+            img: "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxppzhBxX7Tn73EXbykilsnwtEpBoNWrI0eEFfZ7pNTtoEEpGjkZibYAyjWw0AtKzu_tZu3HDk7PnYzWFLN55BG0-&format=source&h=307",
+            packages: [ 
+                { type: "Akun biasa", name: "1 bulan (sharing)", price: 15000 },
+                { type: "Khusus tv", name: "1 bulan (sharing)", price: 25000 },
+                { type: "Private", name: "1 bulan", price: 27000 }
+            ],
+            stock: 32, soldToday: 13, category: "Film & Hiburan"
+        },
+        "Bstation": {
+            img: "https://bstation.net/wp-content/uploads/2025/01/bstation-fav.png",
+            packages: [ 
+                { type: "Harga", name: "1 bulan (sharing)", price: 15000 },
+                { type: "Harga", name: "3 bulan (sharing)", price: 20000 },
+                { type: "Harga", name: "12 bulan (sharing)", price: 25000 }
+            ],
+            stock: 25, soldToday: 6, category: "Film & Hiburan"
+        },
+        "Picsart": {
+            img: "https://cdn-1.webcatalog.io/catalog/picsart/picsart-icon-filled-256.png?v=1720518771427",
+            packages: [ 
+                { type: "Harga", name: "1 bulan (sharing)", price: 8000 },
+                { type: "Harga", name: "2 bulan (sharing)", price: 11000 },
+                { type: "Harga", name: "1 bulan (private)", price: 15000 }
+            ],
+            stock: 44, soldToday: 19, category: "Editing"
+        },
+        "VSCO": {
+            img: "https://play-lh.googleusercontent.com/RdCklOFg3SLN5QF8OR7cU-5bs1ESYo_pqGYrK2ena3XZDcrLOpjf7vLtNQELOR7Uo4MH=s96-rw",
+            packages: [ 
+                { type: "Harga", name: "1 bulan", price: 18000 },
+                { type: "Harga", name: "1 tahun", price: 22000 }
+            ],
+            stock: 60, soldToday: 8, category: "Editing"
+        },
+        "Wattpad": {
+            img: "https://www.wattpad.com/wp-web-assets/images/wattpad-logo.svg",
+            packages: [ 
+                { type: "Harga", name: "1 bulan (sharing)", price: 10000 }
+            ],
+            stock: 55, soldToday: 12, category: "Lainnya"
+        },
+        "WeTV": {
+            img: "https://play-lh.googleusercontent.com/v7drBmcnQjsBqtEj2hRENvcW8adwGgBy2DAc1mYt8_2cbQb7K5DYRSP9_1KdlFrf2Vo=w480-h960-rw",
+            packages: [ 
+                { type: "Harga", name: "1 bulan (Sharing 3 user)", price: 23000 },
+                { type: "Harga", name: "1 bulan (sharing 6 user)", price: 16000 },
+                { type: "Harga", name: "1 bulan (private)", price: 40000 }
+            ],
+            stock: 21, soldToday: 8, category: "Film & Hiburan"
+        },
+        "Wibuku": {
+            img: "https://play-lh.googleusercontent.com/EAVnwk0BS5chgGbygHiIYu2w5OLx54GdXDZQBsdLM4rU_xZ86fPjBmLAljN9wARvmvxA=w480-h960-rw",
+            packages: [ 
+                { type: "Harga", name: "1 bulan (sharing)", price: 10000 }
+            ],
+            stock: 30, soldToday: 9, category: "Film & Hiburan"
+        },
+        "Wink": {
+            img: "https://wink.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.cde512b6.png&w=1080&q=75",
+            packages: [ 
+                { type: "Harga", name: "1 bulan (sharing ios)", price: 15000 }
+            ],
+            stock: 25, soldToday: 17, category: "Editing"
+        },
+        "Youku": {
+            img: "https://play-lh.googleusercontent.com/ryHEj03ZIHqjQGGOyWcnKxXg86sZGOfYKx8b8ptsZQ-sZhHOt2C1gLZrfZS-83lSrqgm=w480-h960-rw",
+            packages: [ 
+                { type: "Harga", name: "1 bulan (sharing)", price: 16000 },
+                { type: "Harga", name: "3 bulan (sharing)", price: 20000 }
+            ],
+            stock: 19, soldToday: 6, category: "Film & Hiburan"
+        },
+        "HBO Go": {
+            img: "https://www.hbomax.com/img/hbomax/logo_nav_bar.png",
+            packages: [ 
+                { type: "Harga", name: "1 bulan (sharing)", price: 20000 },
+                { type: "Harga", name: "3 bulan (sharing)", price: 42000 }
+            ],
+            stock: 22, soldToday: 5, category: "Film & Hiburan"
         }
     };
     
@@ -80,24 +202,29 @@ document.addEventListener('DOMContentLoaded', () => {
         let swiperWrapperHTML = '';
         const allAppNames = Object.keys(appData);
         
-        // --- UBAH DI SINI UNTUK MEMILIH PRODUK DISKON ---
-        const discountedAppNames = ["Canva Pro", "CapCut Pro", "Spotify Premium", "Netflix Premium", "Get Contact Premium"];
+        const discountedAppNames = allAppNames.filter(appName => 
+            appData[appName].packages.some(pkg => pkg.type === "Promo")
+        );
 
-        // Group apps by category
         const categories = allAppNames.reduce((acc, appName) => {
             const app = appData[appName];
             (acc[app.category] = acc[app.category] || []).push(appName);
             return acc;
         }, {});
 
-        // Populate Featured Slider based on the discountedAppNames list
         discountedAppNames.forEach(appName => {
             const app = appData[appName];
             if (app) {
+                const promoPackage = app.packages.find(p => p.type === "Promo" && p.oldPrice);
+                let discountPercentage = 0;
+                if (promoPackage) {
+                    discountPercentage = Math.round(((promoPackage.oldPrice - promoPackage.price) / promoPackage.oldPrice) * 100);
+                }
+
                 const featuredCardHTML = `
                     <div class="swiper-slide">
                         <div class="product-card featured-card cursor-pointer js-open-modal" data-app-name="${appName}">
-                            <div class="discount-badge">-${app.discount}</div>
+                            <div class="discount-badge">-${discountPercentage}%</div>
                             <img src="${app.img}" alt="${appName}" class="product-image">
                             <div class="w-full">
                                 <h3 class="product-title">${appName}</h3>
@@ -111,32 +238,40 @@ document.addEventListener('DOMContentLoaded', () => {
         
         swiperWrapper.innerHTML = swiperWrapperHTML;
 
-        // Populate Product Categories
+        // --- URUTAN KATEGORI YANG DIINGINKAN ---
+        const categoryOrder = ["Editing", "Musik", "Film & Hiburan", "Lainnya"];
         let categoriesHTML = '';
-        for (const categoryName in categories) {
-            categoriesHTML += `
-                <div class="category-section">
-                    <h3 class="category-title">${categoryName}</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 md:gap-6 mt-8">
-                        ${categories[categoryName].map(appName => {
-                            const app = appData[appName];
-                            return `
-                                <div class="product-card cursor-pointer js-open-modal" data-app-name="${appName}">
-                                    <img src="${app.img}" alt="${appName}" class="product-image">
-                                    <h3 class="product-title">${appName}</h3>
-                                </div>
-                            `;
-                        }).join('')}
+        
+        categoryOrder.forEach(categoryName => {
+            const appsInCategory = categories[categoryName];
+            if (appsInCategory && appsInCategory.length > 0) {
+                 categoriesHTML += `
+                    <div class="category-section">
+                        <h3 class="category-title">${categoryName}</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 md:gap-6 mt-8">
+                            ${appsInCategory.map(appName => {
+                                const app = appData[appName];
+                                return `
+                                    <div class="product-card cursor-pointer js-open-modal" data-app-name="${appName}">
+                                        <img src="${app.img}" alt="${appName}" class="product-image">
+                                        <h3 class="product-title">${appName}</h3>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
                     </div>
-                </div>
-            `;
-        }
+                `;
+            }
+        });
+        
         categoriesContainer.innerHTML = categoriesHTML;
 
-        // Populate Popular Products List
+        const popularAppNames = allAppNames
+            .sort((a, b) => appData[b].soldToday - appData[a].soldToday)
+            .slice(0, 4);
+
         let popularListHTML = '';
-        const popularAppNames = ["Netflix Premium", "Spotify Premium", "Canva Pro", "CapCut Pro"];
-         popularAppNames.forEach((appName, index) => {
+        popularAppNames.forEach((appName, index) => {
             const app = appData[appName];
             if (app) {
                 popularListHTML += `
@@ -218,13 +353,23 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const type in groupedPackages) {
             htmlContent += `<div class="mb-5 text-left"><h4 class="text-xl font-semibold text-gray-300 mb-3">${type}</h4><div class="space-y-3">`;
             groupedPackages[type].forEach(pkg => {
+                let priceHTML = `<p class="text-base text-gray-400">Rp ${pkg.price.toLocaleString('id-ID')}</p>`;
+                if (pkg.oldPrice) {
+                    priceHTML = `
+                        <div>
+                            <p class="text-sm text-red-500 line-through">Rp ${pkg.oldPrice.toLocaleString('id-ID')}</p>
+                            <p class="text-base text-green-400 font-bold">Rp ${pkg.price.toLocaleString('id-ID')}</p>
+                        </div>
+                    `;
+                }
+                
                 htmlContent += `
                     <div class="modal-package-item flex items-center justify-between border border-gray-700 p-4 rounded-lg">
                         <div>
                             <p class="text-lg font-medium text-gray-200">${pkg.name}</p>
-                            <p class="text-base text-gray-400">${pkg.price}</p>
+                            ${priceHTML}
                         </div>
-                        <a href="#" class="buy-btn gradient-button text-white font-semibold py-2 px-5 rounded-lg text-sm" data-app-name="${appName}" data-package-type="${type}" data-package-name="${pkg.name}" data-price="${pkg.price}">Order</a>
+                        <a href="#" class="buy-btn gradient-button text-white font-semibold py-2 px-5 rounded-lg text-sm" data-app-name="${appName}" data-package-type="${type}" data-package-name="${pkg.name}" data-price="${pkg.price.toLocaleString('id-ID')}">Order</a>
                     </div>`;
             });
             htmlContent += `</div></div>`;
@@ -252,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const packageName = buyButton.getAttribute('data-package-name');
                 const price = buyButton.getAttribute('data-price');
                 const phoneNumber = '6282246039066';
-                const message = `Halo Kaki Shop, saya ingin memesan:\n\nAplikasi: ${appName}\nPaket: ${packageType} (${packageName})\nHarga: ${price}\n\nTerima kasih!`;
+                const message = `Halo Kaki Shop, saya ingin memesan:\n\nAplikasi: ${appName}\nPaket: ${packageType} (${packageName})\nHarga: Rp ${price}\n\nTerima kasih!`;
                 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                 
                 window.open(whatsappUrl, '_blank');

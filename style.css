@@ -8,10 +8,37 @@
     --gradient-end: #34d399;
 }
 
+/* --- NEW: Aurora Background --- */
+@keyframes aurora-glow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text-primary);
+    position: relative; /* Needed for pseudo-element positioning */
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Use fixed to cover the whole viewport and stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind all content */
+    background: 
+        radial-gradient(ellipse at 70% 20%, hsla(160, 100%, 50%, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at 30% 80%, hsla(190, 100%, 50%, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, hsla(280, 80%, 50%, 0.1) 0%, transparent 60%);
+    background-size: 200% 200%;
+    animation: aurora-glow 25s linear infinite;
+    filter: blur(50px);
+    opacity: 0.7;
 }
 
 /* Gradient Text */
@@ -53,8 +80,8 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background-image: radial-gradient(circle at 20% 25%, rgba(45, 212, 191, 0.15), transparent 30%),
-                      radial-gradient(circle at 80% 70%, rgba(52, 211, 153, 0.1), transparent 25%);
+    /* --- REMOVED: Old background-image property --- */
+    position: relative; /* Ensure content is above the new body background */
 }
 
 /* Product Card */
@@ -188,6 +215,8 @@ body {
     max-height: 85vh; /* Batasi tinggi maksimal modal */
     display: flex;
     flex-direction: column;
+    /* --- UPDATED: Softer animation --- */
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 #modal-content {
     overflow-y: auto; /* Tambahkan scrollbar jika kontennya panjang */
