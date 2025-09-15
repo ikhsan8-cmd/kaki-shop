@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "CapCut Pro": {
             img: "https://th.bing.com/th/id/OSAAS.9309E57AEB6FAE9D260C0BB567E36678?w=72&h=72&c=1&rs=1&o=6&dpr=1.3&pid=TechQna",
             packages: [ 
-                { type: "Promo", name: "1 Bulan (private)", price: 20000, oldPrice: 28000 }, 
-                { type: "Harga normal", name: "1 bulan (Private)", price: 28000 }, 
+                { type: "Promo", name: "1 Bulan (private)", price: 15000, oldPrice: 27000 }, 
+                { type: "Harga normal", name: "1 bulan (Private)", price: 27000 }, 
             ],
-            stock: 12,
+            stock: 5,
             soldToday: 27,
             category: "Editing"
         },
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             packages: [ 
                 { type: "Promo", name: "1 bulan", price: 6000, oldPrice: 10000 },
                 { type: "Promo", name: "2 bulan", price: 10000, oldPrice: 13000 },
-                { type: "Promo", name: "Seumur hidup", price: 16000, oldPrice: 20000 },
+                { type: "Promo", name: "Seumur hidup", price: 20000, oldPrice: 25000 },
                 { type: "Harga normal", name: "3 bulan", price: 15000 } 
             ],
             stock: 10,
@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Viu": {
             img: "https://play-lh.googleusercontent.com/b09h7aIfYMfBtlFRVul6j7jV3pE-gFIHEvR6MmD7jnKxmrBshFNK8-HZwNpvaiI6kR4=s96-rw",
             packages: [ 
+                { type: "Promo", name: "1 Bulan", price: 2000, oldPrice: 3000 },
                 { type: "Promo", name: "1 tahun", price: 18000, oldPrice: 25000 },
                 { type: "Harga normal", name: "1 tahun", price: 25000 }
             ],
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: "1p1u", name: "7 hari (sharing)", price: 15000 },
                 { type: "1p1u", name: "1 bulan (Sharing)", price: 30000 },
                 { type: "1p1u", name: "2 bulan (sharing)", price: 55000 },
-                { type: "Promo", name: "1 bulan", price: 20000, oldPrice: 25000 },
+                { type: "1p2u", name: "1 bulan", price: 20000, oldPrice: 25000 },
                 { type: "1p2u", name: "7 hari (sharing)", price: 13500 },
                 { type: "1p2u", name: "2 bulan (sharing)", price: 45000 },
                 { type: "Semi private", name: "1 bulan", price: 42000 },
