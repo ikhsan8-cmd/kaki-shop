@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             stock: 22, soldToday: 5, category: "Film & Hiburan"
         },
-        "Chat Gbt": {
+        "Chat Gpt": {
             img: "https://tse1.mm.bing.net/th/id/OIP.ZQHJDx6BazQ1SRBLICsX0wHaFj?pid=ImgDet&w=178&h=133&c=7&dpr=1,8&o=7&rm=3",
             packages: [ 
                 { type: "Promo", name: "1 bulan", price: 20000, oldPrice: 25000 },
