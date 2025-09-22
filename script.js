@@ -196,6 +196,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: "Harga", name: "3 bulan (sharing)", price: 42000 }
             ],
             stock: 22, soldToday: 5, category: "Film & Hiburan"
+        },
+        "Chat Gbt": {
+            img: "https://tse1.mm.bing.net/th/id/OIP.ZQHJDx6BazQ1SRBLICsX0wHaFj?pid=ImgDet&w=178&h=133&c=7&dpr=1,8&o=7&rm=3",
+            packages: [ 
+                { type: "Promo", name: "1 bulan", price: 20000, oldPrice: 25000 },
+                { type: "Harga", name: "1 bulan (private)", price: 60000 }
+            ],
+            stock: 22, soldToday: 5, category: "Ai"
         }
     };
     
@@ -240,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
         swiperWrapper.innerHTML = swiperWrapperHTML;
 
         // --- URUTAN KATEGORI YANG DIINGINKAN ---
-        const categoryOrder = ["Editing", "Musik", "Film & Hiburan", "Lainnya"];
+        const categoryOrder = ["Editing", "Musik", "Film & Hiburan", "Ai", "Lainnya"];
         let categoriesHTML = '';
         
         categoryOrder.forEach(categoryName => {
